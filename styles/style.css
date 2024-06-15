@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -35,4 +38,218 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+.content {
+  /* display :grid;
+  grid-template-columns: 711px 399px;
+  gap: 30px;
+   */
+   display: flex;
+   align-items: end;
+   gap: 30px;
+   width: 1140px;
+}
+.result{
+
+}
+.result__video-container {
+  position:relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+.result__video{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+.search-form {
+  display: flex;
+  justify-content: space-between;
+
+}
+.search-form__submit-button{
+width: 194px;
+height: 34px;
+font-family: 'Fira Sans Condensed';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+background: transparent;
+color: #FFFFFF;
+
+}
+.title{
+width: 260px;
+height: 210px;
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-size: 75px;
+line-height: 94%;
+text-transform: uppercase;
+margin-bottom: 18px;
+}
+.content__accent {
+color: #545050;
+}
+.content__video-card-thumbnail{
+  width: 194px;
+  height: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+.content__video-card-title{
+max-width: 200px;
+text-overflow: ellipsis;
+white-space: nowrap; 
+overflow: hidden;
+font-family: 'Oswald';
+font-size: 30px;
+line-height: 1.2;
+text-transform: uppercase;
+}
+ .content__video-card-description {
+
+
+line-height: 0.9;
+
+ } 
+ .content__list-item:not(:last-child) {
+ margin-bottom: 32px;
+ }
+ .content__video-card{
+  display: flex;
+  align-items: start;
+
+ }
+ input::placeholder {
+ color:rgba(255, 255, 255, 1);
+ opacity: 0.4;
+ font-family: 'Fira Sans Condensed';
+font-size: 18px;
+font-weight: 400;
+line-height: 21.6px;
+
+
+}
+.search-form__textfield {
+  appearance: none;
+  width:225px;
+  border: none;
+  border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+  line-height: 1.5;
+  color: inherit;
+  background-color: transparent;
+}
+.search-form__fieldset{
+ border:0;
+}
+.visually-hidden {
+clip: rect(0 0 0 0);
+clip-path: inset(50%);
+width: 1px;
+height: 1px;
+overflow: hidden;
+position: absolute;
+white-space: nowrap;
+
+} 
+/* label span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  vertical-align: middle;
+  background-color: black;
+ 
+} */
+/* input[type="checkbox"] + span {
+  border: 1px solid white;
+  
+} */
+.search-form_label-text{
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Fira Sans Condesed";
+  font-weight: 400;
+  font-size: 18px;
+}
+.more-button{
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+width: 399px;
+height: 34px;
+border: 1px solid #FFFFFF;
+background: transparent;
+color:#fff;
+}
+.button {
+  margin-top: 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: "Fira Sans Condensed";
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #1b1919;}
+  .button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .button:active {
+    background-color: #545050;
+  }
+  .button:focus-visible {
+    outline: 1px solid #fff;
+    outline-offset: 1px;
+  }
+.search-form__label-text:hover{
+text-decoration: underline;
+}
+.search-form__checkbox[type='checkbox']:checked + span::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+.search-form__fieldset-title {
+
+line-height: 1.6;
+font-weight: 400;
+font-size: 18px;
+}
+.content__list{
+  height: 298px;
+  overflow: auto;
+}
+.content__video-card-description-container {
+width: 200px;
+}
+.content__card-link {
+margin: 2px;
+display: block;
+text-decoration: none;
+color: currentColor;
+}
+.search-form__pseudo-checkbox {
+position: relative;
+display: inline-block;
+width: 19px;
+height: 19px;
+border:1px solid currentColor;
+margin-right: 7px;
+}
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  font-size: 17px;
 }
