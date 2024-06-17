@@ -44,11 +44,11 @@ ol {
   display: flex;
   align-items: end;
   gap: 30px;
-  width: 1140px;
+  inline-size: 1140px;
 }
 
 .result {
-  width: 711px;
+ display: block;
 }
 
 .result__video-container {
@@ -62,6 +62,7 @@ ol {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -70,9 +71,9 @@ ol {
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
-  font-family: 'Fira Sans Condensed';
+  min-width: 194px;
+  min-height: 34px;
+  font-family: 'Fira Sans Condensed','sans-serif';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -83,8 +84,6 @@ ol {
 }
 
 .title {
-  width: 260px;
-  height: 210px;
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 700;
@@ -104,15 +103,16 @@ ol {
   object-fit: cover;
   object-position: center;
 }
+
 .content__video-card-title {
-max-width: 200px;
-text-overflow: ellipsis;
-white-space: nowrap; 
-overflow: hidden;
-font-family: 'Oswald';
-font-size: 30px;
-line-height: 1.2;
-text-transform: uppercase;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  overflow: hidden;
+  font-family: 'Oswald';
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .content__video-card-description {
@@ -143,7 +143,9 @@ input::placeholder {
   border: none;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
-  line-height: 1.6;
+  line-height: 21.6px;
+  font-size: inherit;
+  font-family: inherit;
   color: inherit;
   background-color: transparent;
 }
@@ -198,27 +200,27 @@ input::placeholder {
 
 .button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
-.button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
+.button:focus {
+  outline: none;
 }
 
-.search-form__label-text:hover {
+.button:focus-visible { 
+  outline: 1px solid #fff; 
+  outline-offset: 1px; 
+}
+
+.search-form__label:hover:has(.search-form__label-text) {
   text-decoration: underline;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
   content: "";
-  left: 50%;
-  top: 50%;
-  display: block;
-  position: absolute;
-  height: 16px;
-  width: 16px;
-  background-color: currentColor;
-  transform: translate(-50%, -50%);
 }
 
 .search-form__fieldset-title {
@@ -233,7 +235,8 @@ input::placeholder {
 }
 
 .content__video-card-description-container {
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
 }
 
 .content__card-link {
@@ -243,7 +246,7 @@ input::placeholder {
   color: currentColor;
 }
 
-.content__card-link:focus{
+.content__card-link:focus {
   border: none;
   outline: none;
 }
@@ -259,8 +262,9 @@ input::placeholder {
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   border:1px solid currentColor;
@@ -274,6 +278,7 @@ input::placeholder {
 }
 
 .search-form__label {
+  align-items: center;
   display: flex;
   width: fit-content;
   cursor: pointer;
@@ -285,16 +290,24 @@ input::placeholder {
   text-decoration: underline;
 }
 
-.search-form__label:focus{
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-color: #fff;  
 }
 
-.search-form__textfield:focus{
-  outline: 1px solid #fff;
-  outline-color: #fff;  
+.search-form__textfield:focus {
+  outline: none;
 }
 
-.content__video-card:active {
+.content__video-card:active  {
+  background-color: #545050;
+  text-decoration: none;
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.content__card-link_current {
   background-color: #545050;
 }
