@@ -48,7 +48,7 @@ ol {
 }
 
 .result {
- display: block;
+  display: block;
 }
 
 .result__video-container {
@@ -84,7 +84,7 @@ ol {
 }
 
 .title {
-  font-family: 'Oswald';
+  font-family: 'Oswald','sans-serif';
   font-style: normal;
   font-weight: 700;
   font-size: 75px;
@@ -109,7 +109,7 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap; 
   overflow: hidden;
-  font-family: 'Oswald';
+  font-family: 'Oswald','sans-serif';
   font-size: 30px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -131,7 +131,7 @@ ol {
 input::placeholder {
   color: rgba(255, 255, 255, 1);
   opacity: 0.4;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed','sans-serif';
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -166,7 +166,7 @@ input::placeholder {
 
 .search-form_label-text {
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Fira Sans Condesed";
+  font-family: "Fira Sans Condesed",'sans-serif';
   font-weight: 400;
   font-size: 18px;
 }
@@ -187,7 +187,7 @@ input::placeholder {
   margin-top: 20px;
   border: 1px solid #fff;
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed",'sans-serif';
   font-weight: 700;
   font-size: 18px;
   background-color: #1b1919;
@@ -284,8 +284,7 @@ input::placeholder {
   cursor: pointer;
 }
 
-.search-form__pseudo-checkbox:hover + .search-form__label-text,
-.search-form__label-text:hover {
+.search-form__pseudo-checkbox:hover + .search-form__label:has(.search-form__label-text) {
   text-underline-offset: 4px;
   text-decoration: underline;
 }
