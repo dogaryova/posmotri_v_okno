@@ -212,10 +212,6 @@ input::placeholder {
   outline-offset: 1px; 
 }
 
-.search-form__label:hover .search-form__label-text  {
-  text-decoration: underline;
-}
-
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   width: 15px;
   height: 15px;
